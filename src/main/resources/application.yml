@@ -1,0 +1,7 @@
+server:
+  port: 8963
+
+spring:
+  application:
+    name: Get the UMF's Label Project
+

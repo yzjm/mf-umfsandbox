@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration scan="true" scanPeriod="5" debug="false">
+
+    <Property name="log.base" value="log/"/>
+
+    <!--console -->
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>[%date{yyyyMMdd HHmmss SSS}][%-5p][%t][%-15c{0}] - %m%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <!-- detail log -->
+    <logger name="detail" additivity="false">
+        <appender name="detail" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <file>${log.base}detail.log</file>
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <FileNamePattern>${log.base}detail.%d{yyyyMMdd}.log</FileNamePattern>
+            </rollingPolicy>
+            <encoder>
+                <pattern>[%date{yyyyMMdd HHmmss SSS}][%-5p][%t][%-15c{0}] - %m%n</pattern>
+            </encoder>
+        </appender>
+    </logger>
+
+    <root level="info">
+        <appender-ref ref="stdout" />
+    </root>
+
+</configuration>
