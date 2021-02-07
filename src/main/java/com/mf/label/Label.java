@@ -88,6 +88,10 @@ public abstract class Label {
     // 如果所有入模参数均为unknown，则不入模计算，直接返回unknown
     private boolean validateBasicVariables() {
         for (Map.Entry<String, String> entry : basicVariables.entrySet()) {
+            // labelId不是入模参数，需要排除
+            if ("labelId".equals(entry.getKey())){
+                continue;
+            }
             if (!"unknown".equals(entry.getValue())) {
                 return true;
             }
