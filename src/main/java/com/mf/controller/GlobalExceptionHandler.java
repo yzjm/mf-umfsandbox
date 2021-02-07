@@ -12,6 +12,7 @@ public class GlobalExceptionHandler {
     @Autowired
     private LogService logService;
 
+    //=======================================================================
     @ExceptionHandler(Exception.class)
     @ResponseBody
     public CommonResponse handleException(Exception e) {
