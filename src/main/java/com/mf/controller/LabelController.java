@@ -3,7 +3,6 @@ package com.mf.controller;
 import com.mf.common.CommonResponse;
 import com.mf.service.LabelService;
 import com.mf.service.LogService;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,7 +18,7 @@ public class LabelController {
     private LogService logService;
 
     @PostMapping("/label")
-    public CommonResponse labelDispatch(@RequestBody Map<String, String> basicVariables) {
+    public CommonResponse labelDispatch(@RequestBody Map<String, String> basicVariables) throws Exception {
         String labelId = basicVariables.get("labelId");
         logService.printLog("接收到请求[labelId:" + labelId + ",basicVariables:" + basicVariables + "]");
         String labelValue = labelService.getLabelValue(basicVariables, labelId);

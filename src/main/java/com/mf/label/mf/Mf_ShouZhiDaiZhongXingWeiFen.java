@@ -9,7 +9,9 @@ import org.springframework.stereotype.Component;
 import java.io.File;
 import java.io.InputStream;
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Component
@@ -32,112 +34,114 @@ public class Mf_ShouZhiDaiZhongXingWeiFen extends Label {
     }
 
     @Override
-    protected Map<String, String> doSetBasicVariables() {
-        Map<String, String> basicVariables = new HashMap<>();
-        basicVariables.put("Pro06152", "unknown");
-        basicVariables.put("Pro06178", "unknown");
-        basicVariables.put("Pro06173", "unknown");
-        basicVariables.put("Pro06174", "unknown");
-        basicVariables.put("Pro06035", "unknown");
-        basicVariables.put("Pro06037", "unknown");
-        basicVariables.put("Pro06099", "unknown");
-        basicVariables.put("Pro06065", "unknown");
-        basicVariables.put("Pro06236", "unknown");
-        basicVariables.put("Pro06235", "unknown");
-        basicVariables.put("Pro05569", "unknown");
-        basicVariables.put("Pro05343", "unknown");
-        basicVariables.put("Pro05318", "unknown");
-        basicVariables.put("Pro05315", "unknown");
-        basicVariables.put("Pro04890", "unknown");
-        basicVariables.put("Pro04994", "unknown");
-        basicVariables.put("Pro05070", "unknown");
-        basicVariables.put("Pro05282", "unknown");
-        basicVariables.put("Pro05665", "unknown");
-        basicVariables.put("Pro05636", "unknown");
-        basicVariables.put("Pro05512", "unknown");
-        basicVariables.put("Pro05516", "unknown");
-        basicVariables.put("Pro05463", "unknown");
-        basicVariables.put("Pro05776", "unknown");
-        basicVariables.put("Pro05401", "unknown");
-        basicVariables.put("Pro05711", "unknown");
-        basicVariables.put("Pro05556", "unknown");
-        basicVariables.put("Pro05603", "unknown");
-        basicVariables.put("Pro05631", "unknown");
-        basicVariables.put("Pro05380", "unknown");
-        basicVariables.put("Pro06197", "unknown");
-        basicVariables.put("Pro06198", "unknown");
-        basicVariables.put("Pro06344", "unknown");
-        basicVariables.put("Pro03347", "unknown");
-        basicVariables.put("Pro03340", "unknown");
-        basicVariables.put("Pro02690", "unknown");
-        basicVariables.put("Pro02798", "unknown");
-        basicVariables.put("Pro02653", "unknown");
-        basicVariables.put("Pro02672", "unknown");
-        basicVariables.put("Pro02461", "unknown");
-        basicVariables.put("Pro02528", "unknown");
-        basicVariables.put("Pro02394", "unknown");
-        basicVariables.put("Pro02448", "unknown");
-        basicVariables.put("Pro02478", "unknown");
-        basicVariables.put("Pro02192", "unknown");
-        basicVariables.put("Pro02201", "unknown");
-        basicVariables.put("Pro03274", "unknown");
-        basicVariables.put("Pro03140", "unknown");
-        basicVariables.put("Pro03334", "unknown");
-        basicVariables.put("Pro03164", "unknown");
-        basicVariables.put("Pro03239", "unknown");
-        basicVariables.put("Pro03210", "unknown");
-        basicVariables.put("Pro04684", "unknown");
-        basicVariables.put("Pro04846", "unknown");
-        basicVariables.put("Pro04795", "unknown");
-        basicVariables.put("Pro04865", "unknown");
-        basicVariables.put("Pro04587", "unknown");
-        basicVariables.put("Pro04825", "unknown");
-        basicVariables.put("Pro04583", "unknown");
-        basicVariables.put("Pro02869", "unknown");
-        basicVariables.put("Pro02900", "unknown");
-        basicVariables.put("Pro02901", "unknown");
-        basicVariables.put("Pro02844", "unknown");
-        basicVariables.put("Pro02830", "unknown");
-        basicVariables.put("Pro02896", "unknown");
-        basicVariables.put("Pro02874", "unknown");
-        basicVariables.put("Pro04402", "unknown");
-        basicVariables.put("Pro04331", "unknown");
-        basicVariables.put("Pro04307", "unknown");
-        basicVariables.put("Pro04469", "unknown");
-        basicVariables.put("Pro02180", "unknown");
-        basicVariables.put("Pro04080", "unknown");
-        basicVariables.put("Pro04194", "unknown");
-        basicVariables.put("Pro04284", "unknown");
-        basicVariables.put("Pro04181", "unknown");
-        basicVariables.put("Pro04055", "unknown");
-        basicVariables.put("Pro04165", "unknown");
-        basicVariables.put("Pro04099", "unknown");
-        basicVariables.put("Pro04088", "unknown");
-        basicVariables.put("Pro04108", "unknown");
-        basicVariables.put("Pro02043", "unknown");
-        basicVariables.put("Pro02167", "unknown");
-        basicVariables.put("Pro02169", "unknown");
-        basicVariables.put("Pro04009", "unknown");
-        basicVariables.put("Pro03811", "unknown");
-        basicVariables.put("Pro03840", "unknown");
-        basicVariables.put("Pro03773", "unknown");
-        basicVariables.put("Pro02033", "unknown");
-        basicVariables.put("Pro03414", "unknown");
-        basicVariables.put("Pro03663", "unknown");
-        basicVariables.put("Pro03665", "unknown");
-        basicVariables.put("Pro03664", "unknown");
-        basicVariables.put("Pro03627", "unknown");
-        basicVariables.put("Pro03451", "unknown");
-        basicVariables.put("Pro03652", "unknown");
-        basicVariables.put("Pro03603", "unknown");
-        basicVariables.put("Pro03651", "unknown");
-        basicVariables.put("Pro03438", "unknown");
+    protected List<String> getBasicVariablesList() {
+        List<String> basicVariables = new ArrayList<>(99);
+        // 申请日期，yyyyMMdd
+        basicVariables.add("queryDate");
+        basicVariables.add("Pro06152");
+        basicVariables.add("Pro06178");
+        basicVariables.add("Pro06173");
+        basicVariables.add("Pro06174");
+        basicVariables.add("Pro06035");
+        basicVariables.add("Pro06037");
+        basicVariables.add("Pro06099");
+        basicVariables.add("Pro06065");
+        basicVariables.add("Pro06236");
+        basicVariables.add("Pro06235");
+        basicVariables.add("Pro05569");
+        basicVariables.add("Pro05343");
+        basicVariables.add("Pro05318");
+        basicVariables.add("Pro05315");
+        basicVariables.add("Pro04890");
+        basicVariables.add("Pro04994");
+        basicVariables.add("Pro05070");
+        basicVariables.add("Pro05282");
+        basicVariables.add("Pro05665");
+        basicVariables.add("Pro05636");
+        basicVariables.add("Pro05512");
+        basicVariables.add("Pro05516");
+        basicVariables.add("Pro05463");
+        basicVariables.add("Pro05776");
+        basicVariables.add("Pro05401");
+        basicVariables.add("Pro05711");
+        basicVariables.add("Pro05556");
+        basicVariables.add("Pro05603");
+        basicVariables.add("Pro05631");
+        basicVariables.add("Pro05380");
+        basicVariables.add("Pro06197");
+        basicVariables.add("Pro06198");
+        basicVariables.add("Pro06344");
+        basicVariables.add("Pro03347");
+        basicVariables.add("Pro03340");
+        basicVariables.add("Pro02690");
+        basicVariables.add("Pro02798");
+        basicVariables.add("Pro02653");
+        basicVariables.add("Pro02672");
+        basicVariables.add("Pro02461");
+        basicVariables.add("Pro02528");
+        basicVariables.add("Pro02394");
+        basicVariables.add("Pro02448");
+        basicVariables.add("Pro02478");
+        basicVariables.add("Pro02192");
+        basicVariables.add("Pro02201");
+        basicVariables.add("Pro03274");
+        basicVariables.add("Pro03140");
+        basicVariables.add("Pro03334");
+        basicVariables.add("Pro03164");
+        basicVariables.add("Pro03239");
+        basicVariables.add("Pro03210");
+        basicVariables.add("Pro04684");
+        basicVariables.add("Pro04846");
+        basicVariables.add("Pro04795");
+        basicVariables.add("Pro04865");
+        basicVariables.add("Pro04587");
+        basicVariables.add("Pro04825");
+        basicVariables.add("Pro04583");
+        basicVariables.add("Pro02869");
+        basicVariables.add("Pro02900");
+        basicVariables.add("Pro02901");
+        basicVariables.add("Pro02844");
+        basicVariables.add("Pro02830");
+        basicVariables.add("Pro02896");
+        basicVariables.add("Pro02874");
+        basicVariables.add("Pro04402");
+        basicVariables.add("Pro04331");
+        basicVariables.add("Pro04307");
+        basicVariables.add("Pro04469");
+        basicVariables.add("Pro02180");
+        basicVariables.add("Pro04080");
+        basicVariables.add("Pro04194");
+        basicVariables.add("Pro04284");
+        basicVariables.add("Pro04181");
+        basicVariables.add("Pro04055");
+        basicVariables.add("Pro04165");
+        basicVariables.add("Pro04099");
+        basicVariables.add("Pro04088");
+        basicVariables.add("Pro04108");
+        basicVariables.add("Pro02043");
+        basicVariables.add("Pro02167");
+        basicVariables.add("Pro02169");
+        basicVariables.add("Pro04009");
+        basicVariables.add("Pro03811");
+        basicVariables.add("Pro03840");
+        basicVariables.add("Pro03773");
+        basicVariables.add("Pro02033");
+        basicVariables.add("Pro03414");
+        basicVariables.add("Pro03663");
+        basicVariables.add("Pro03665");
+        basicVariables.add("Pro03664");
+        basicVariables.add("Pro03627");
+        basicVariables.add("Pro03451");
+        basicVariables.add("Pro03652");
+        basicVariables.add("Pro03603");
+        basicVariables.add("Pro03651");
+        basicVariables.add("Pro03438");
         return basicVariables;
     }
 
 
     @Override
-    protected void doFixBasicVariables(Map<String, String> basicVariables) {
+    protected void doFixBasicVariables(Map<String, String> basicVariables) throws Exception {
         // 标签值为unknown的填充为-9999
         for (Map.Entry<String, String> entry : basicVariables.entrySet()) {
             if ("unknown".equals(entry.getValue())) {
@@ -154,13 +158,14 @@ public class Mf_ShouZhiDaiZhongXingWeiFen extends Label {
         basicVariables.put("Pro06065_1", basicVariables.get("Pro06065"));
         basicVariables.put("Pro06236_1", basicVariables.get("Pro06236"));
         basicVariables.put("Pro06235_1", basicVariables.get("Pro06235"));
-        basicVariables.put("Pro06197_1_dif", calculateDateVariable(basicVariables.get("Pro06197")));
-        basicVariables.put("Pro06198_1_dif", calculateDateVariable(basicVariables.get("Pro06198")));
+        basicVariables.put("Pro06197_1_dif", calculateDateVariable(basicVariables.get("Pro06197"), basicVariables.get("queryDate")));
+        basicVariables.put("Pro06198_1_dif", calculateDateVariable(basicVariables.get("Pro06198"), basicVariables.get("queryDate")));
         basicVariables.put("Pro06344_1", basicVariables.get("Pro06344"));
     }
 
     @Override
     protected String doCalculateLabelValue(Map<String, String> basicVariables) {
+        System.out.println(basicVariables);
         double p1 = Double.parseDouble(PmmlUtil.getPmmlResult(evaluator, basicVariables));
         double labelValue = Math.round(-20 * Math.log(1 - p1));
         if (labelValue > 100) {
@@ -172,18 +177,20 @@ public class Mf_ShouZhiDaiZhongXingWeiFen extends Label {
         return labelValue + "";
     }
 
-    private String calculateDateVariable(String variableValue) {
-        if ("-9999".equals(variableValue)) {
-            return variableValue;
-        }
-        try {
+    private String calculateDateVariable(String variableValue, String queryDate) throws ParseException {
+        String value = "-9999";
+        if (!"-9999".equals(variableValue)) {
+            int queryYear = DateUtil.getNowYear();
+            int queryMonth = DateUtil.getNowMonth();
+            if (!"-9999".equals(queryDate)) {
+                queryYear = DateUtil.getYearBy_yyyyMMdd(queryDate);
+                queryMonth = DateUtil.getMonthBy_yyyyMMdd(queryDate);
+            }
             int year = DateUtil.getYearBy_yyyyMM(variableValue);
             int month = DateUtil.getMonthBy_yyyyMM(variableValue);
-            return (DateUtil.getNowYear() - year) * 12 + (DateUtil.getNowMonth() - month) + "";
-        } catch (ParseException e) {
-            e.printStackTrace();
-            return "-9999";
+            value = (queryYear - year) * 12 + (queryMonth - month) + "";
         }
+        return value;
     }
 
 }

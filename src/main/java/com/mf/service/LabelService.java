@@ -15,7 +15,7 @@ public class LabelService {
      */
     private Map<String, Label> labelManager = new HashMap<>();
 
-    public String getLabelValue(Map<String, String> basicVariables, String labelId) {
+    public String getLabelValue(Map<String, String> basicVariables, String labelId) throws Exception {
         Label targetLabel = labelManager.get(labelId);
         Assert.notNull(targetLabel, "未传或传入的标签值有误");
         return targetLabel.calculateLabelValue(basicVariables);
